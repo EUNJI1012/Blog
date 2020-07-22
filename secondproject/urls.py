@@ -7,7 +7,9 @@ import portfolio.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls')),
-    path('portfolio/', include('portfolio.urls')),
+    #path('blog/', include('blog.urls')),
+    #path('portfolio/', include('portfolio.urls')),
+    url(r'^blog/',include('blog.urls')),
+    url(r'^portfolio/',include('portfolio.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
